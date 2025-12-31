@@ -35,6 +35,20 @@ export async function POST(request: NextRequest) {
     }
     return NextResponse.json({ message: "auth api POST request received", data: { hashedPassword, token } });
     } else if (action === "login") {
+        const user = await prisma.user.findUnique({
+        where: {
+            username: username
+        }
+    })
+    if (!user) {
+        return NextResponse.json({ message: "Invalid username or password"
+ }, { status: 401 });
+    }
+    const passwordMatch = bcrypt.compareSync(password, user.password);
+    if (!passwordMatch) {
+        return NextResponse.json({ message: "Invalid username or password"
+}, { status: 401 });
+    }
         const token = jwt.sign(payload, secret)
         return NextResponse.json({ message: "auth api POST request received", data: { token } });
     } else {
