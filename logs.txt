@@ -1,0 +1,19 @@
+===== Dev Server Start =====
+> npm run dev
+
+ready - started server on http://localhost:3000
+
+===== Authentication =====
+POST /api/auth (register) 200 OK
+POST /api/auth (login) 200 OK
+
+===== Posts API =====
+GET /api/posts 200 OK
+POST /api/posts 200 OK
+DELETE /api/posts 200 OK
+
+===== Frontend Flow =====
+Login successful → redirected to dashboard
+Create note successful
+Delete note successful
+Logout successful
