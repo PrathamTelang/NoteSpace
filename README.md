@@ -1,52 +1,46 @@
-# NoteSpace — Full Stack Web App
+NoteSpace — Full Stack Web App
 
-A scalable web application with authentication and a dashboard, built using **Next.js**, **TypeScript**, **PostgreSQL**, and **Prisma**.
+A scalable web application with authentication and a dashboard, built using Next.js, TypeScript, PostgreSQL, and Prisma.
 
 This project demonstrates frontend engineering skills along with backend API integration, authentication, and database handling.
 
----
+Features
 
-##  Features
+Authentication
+User registration & login
+JWT-based authentication
+Password hashing using bcrypt
+Protected dashboard routes
 
-### Authentication
-- User registration & login
-- JWT-based authentication
-- Password hashing using bcrypt
-- Protected dashboard routes
+Dashboard
+View all personal notes
+Create new notes
+Delete notes
+Logout functionality
 
-### Dashboard
-- View all personal notes
-- Create new notes
-- Delete notes
-- Logout functionality
+Backend APIs
+`/api/auth` — register & login
+`/api/posts` — CRUD operations on notes (protected)
 
-### Backend APIs
-- `/api/auth` — register & login
-- `/api/posts` — CRUD operations on notes (protected)
 
----
+Tech Stack
 
-## 🛠 Tech Stack
+Frontend
+Next.js (App Router)
+React
+TypeScript
+Tailwind CSS
 
-**Frontend**
-- Next.js (App Router)
-- React
-- TypeScript
-- Tailwind CSS
+Backend
+Next.js API Routes
+JWT Authentication
+Prisma ORM
 
-**Backend**
-- Next.js API Routes
-- JWT Authentication
-- Prisma ORM
+Database
+PostgreSQL
 
-**Database**
-- PostgreSQL
 
----
-
-##  Project Structure
-
-```txt
+Project Structure
 app/
  ├─ api/
  │   ├─ auth/route.ts
@@ -67,27 +61,27 @@ npm run dev
 
 If this application were to be scaled for production:
 
-1. **Authentication**
+1. Authentication
    - Move JWT storage to HTTP-only cookies
    - Implement refresh tokens
    - Use role-based access control if needed
 
-2. **Backend**
+2. Backend
    - Extract APIs into a dedicated backend service
    - Introduce request validation (Zod)
    - Add rate limiting & logging
 
-3. **Database**
+3. Database
    - Add indexes on frequently queried fields
    - Use connection pooling
    - Apply migrations via CI/CD
 
-4. **Frontend**
+4. Frontend
    - Introduce global auth state (Context / Zustand)
    - Add loading skeletons & better error handling
    - Server-side rendering for critical pages
 
-5. **Infrastructure**
+5. Infrastructure
    - Dockerize the application
    - Deploy using cloud providers (Vercel + managed DB)
    - Use monitoring & error tracking tools
