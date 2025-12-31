@@ -4,7 +4,7 @@ import React from 'react'
 function Navbar() {
   return (
       <div className="flex justify-between items-center  sm:py-4 sm:mx-40 py-3 px-4  bg-white/50 bg-blur sticky top-4 z-50 rounded-lg shadow-md shadow-gray-300">
-        <h1 className="text-xl font-bold">BCRUD</h1>
+        <h1 className="text-xl font-bold">NoteSpace</h1>
         <div className='flex gap-2'>
           <Link
   href="/login"
