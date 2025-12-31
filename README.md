@@ -6,7 +6,7 @@ This project demonstrates frontend engineering skills along with backend API int
 
 ---
 
-## 🚀 Features
+##  Features
 
 ### Authentication
 - User registration & login
@@ -44,7 +44,7 @@ This project demonstrates frontend engineering skills along with backend API int
 
 ---
 
-## 🧠 Project Structure
+##  Project Structure
 
 ```txt
 app/
@@ -56,3 +56,38 @@ app/
  ├─ dashboard/page.tsx
 prisma/
  ├─ schema.prisma
+
+
+# install dependencies
+npm install
+
+# run dev server
+npm run dev
+
+
+If this application were to be scaled for production:
+
+1. **Authentication**
+   - Move JWT storage to HTTP-only cookies
+   - Implement refresh tokens
+   - Use role-based access control if needed
+
+2. **Backend**
+   - Extract APIs into a dedicated backend service
+   - Introduce request validation (Zod)
+   - Add rate limiting & logging
+
+3. **Database**
+   - Add indexes on frequently queried fields
+   - Use connection pooling
+   - Apply migrations via CI/CD
+
+4. **Frontend**
+   - Introduce global auth state (Context / Zustand)
+   - Add loading skeletons & better error handling
+   - Server-side rendering for critical pages
+
+5. **Infrastructure**
+   - Dockerize the application
+   - Deploy using cloud providers (Vercel + managed DB)
+   - Use monitoring & error tracking tools
